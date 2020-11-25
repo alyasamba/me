@@ -1,0 +1,583 @@
+{% load static %}
+
+<html lang="fr">
+	<head>
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-script-type" content="text/javascript" />
+		<meta http-equiv="content-style-type" content="text/css" />
+		<meta http-equiv="content-language" content="nl" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Ryann Christopher C. Ang- Web Developer - Interactive Resume</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+		<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+		<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+		<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+
+		<!--[if lt IE 9]>
+			<script src="{% static 'js/html5shiv.js' %}"></script>
+			<script src="{% static  'js/respond.min.js' %}"></script>
+		<![endif]-->
+
+		<!-- Begin Inspectlet Embed Code -->
+		<script type="text/javascript" id="inspectletjs">
+			window.__insp = window.__insp || [];
+			__insp.push(['wid', 92785244]);
+			(function() {
+				function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+				if (window.attachEvent){
+					window.attachEvent('onload', __ldinsp);
+				}else{
+					window.addEventListener('load', __ldinsp, false);
+				}
+			})();
+		</script>
+		<!-- End Inspectlet Embed Code -->
+	</head>
+	<body data-spy="scroll" data-target="#navbar-example">
+
+		<div id="top" class="jumbotron" data-src="<?= $current_header['source']; ?>" data-position="<?= $current_header['position']; ?>">
+			<div class="container">
+				<h1>Ali Samba</h1>
+				<p class="lead">CV interactif / Interactive resume</p>
+			</div>
+
+			<div class="overlay"></div>
+
+			<a href="#profile" class="scroll-down">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</a>
+		</div>
+
+		<nav class="navbar navbar-default" id="navbar-example" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Basculer la navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#profile">Profile</a></li>
+					<li><a href="#experiences">Experiences</a></li>
+					<li><a href="#abilities">Abilities</a></li>
+					<li><a href="#projects">Projets</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+
+		<div class="background-white">
+			<div id="profile" class="container">
+				<h2>Profile</h2>
+				<p class="lead">Je suis un développeur web Django créatif / Data Scientist</p>
+
+				<hr />
+				<div class="row">
+					<div class="col-md-4">
+						<h3>About me</h3>
+						<p>
+						Je suis Ali Samba, un développeur web / programmeur créatif avec une bonne connaissance des techniques web back-end et de l'intelligence artificielle.
+						</p>
+					</div>
+					<div class="col-md-4 text-center">
+						<img src="{%static 'images/ali.png' %}" alt="photo de Ali Samba" width="246" height="246" />
+					</div>
+					<div class="col-md-4">
+						<h3>Details</h3>
+						<p>
+							<strong>Name:</strong> Ali Samba<br />
+							<strong>Age:</strong> 25<br />
+							<strong>Location:</strong> Dakar, Senegal<br/>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="experiences" class="container">
+			<h2>Experiences</h2>
+			<p class="lead">
+				&ldquo;Les protons donnent à un atome son identité, les électrons sa personnalité.&rdquo;<br />- Bill Bryson, une brève histoire de presque tout
+			</p>
+
+			<hr />
+
+			<h3>Educations</h3>
+			<div class="experiences">
+
+				<div class="experience row">
+					<div class="col-md-4">
+						<h4>Iseg/Unidaf et UVS à Daka Et <a href="www.openclassrooms.com"></a>openclasserooms</h4>
+						<p class="experience-period">
+							June 2017 - May 2018
+						</p>
+					</div>
+					<div class="col-md-8">
+						<p>
+							<strong>Bachelier en série S à CPSML</strong>
+							<span class="hidden-phone">
+								Un programme d'études de trois ans qui vise à produire des ingénieurs en genie logiciel capables de conceptualiser, de concevoir et de mettre en œuvre des logiciel, des dispositifs, informatiques et de communication innovants.
+
+							</span>
+							<span class="experience-details">
+								<span class="location">
+									<span class="glyphicon glyphicon-map-marker"></span>
+									Yoff, Dakar
+								</span>
+							</span>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<hr />
+
+			<h3>Carrières</h3>
+			<div class="experiences">
+
+				<div class="experience row">
+					<div class="col-md-4">
+						<h4>Adventra Inc.</h4>
+						<p class="experience-period">
+							Décembre 2019 - actuel
+						</p>
+					</div>
+					<div class="col-md-8">
+						<p>
+							<strong>Développeur Backend-Web</strong>
+							<span class="hidden-phone">
+										Développer et utiliser une API de web-scraping qui sera utilisée dans l'acquisition de données de l'application. Codé et tester l'ensemble du serveur Web back-end.
+										Conception et mise en œuvre de la base de données Progresql qui serait le cœur de l'application. Rédaction des spécifications des produits pour travailler avec les développeurs et les concepteurs sur le développement du produit.
+							</span>
+							<span class="experience-details">
+								<span class="location">
+									<span class="glyphicon glyphicon-map-marker"></span>
+									Dakar, Senegal
+								</span>
+							</span>
+
+						</p>
+					</div>
+
+					<div class="col-md-4">
+						<h4>Uplift Microfinance Inc.</h4>
+						<p class="experience-period">
+							May 2018 - May 2019
+						</p>
+					</div>
+					<div class="col-md-8">
+						<p>
+							<strong>Développeur Web Full Stack</strong>
+							<span class="hidden-phone">
+								Conception et développement de l'intégralité du frontal et du backend d'un site Web de type article. Utilisé et implémenté différentes API comme l'API Google et l'API Wordpresset l'API facebook.
+							</span>
+							<span class="experience-details">
+								<span class="location">
+									<span class="glyphicon glyphicon-map-marker"></span>
+									Dakar, Senegal
+								</span>
+								<span class="seperator">|</span>
+								<span class="link">
+									<span class="glyphicon glyphicon-link"></span>
+									<a href="http://uplift.org.ph" target="_blank"> http://uplift.org.ph</a>
+								</span>
+							</span>
+						</p>
+					</div>
+
+					<div class="col-md-4">
+						<h4>Microtech96 Inc.</h4>
+						<p class="experience-period">
+							Nov 2017 - May 2018
+						</p>
+					</div>
+					<div class="col-md-8">
+						<p>
+							<strong>Software Developer/ Data Scientist</strong>
+							<span class="hidden-phone">
+								Dispositifs électroniques conçus et automatisés avec la mise en œuvre d'algorithmes d'apprentissage automatique. Conçu et développé des produits utilisant la programmation C, Matlab et Python.
+								Implémentation de plusieurs itérations du prototype et présentation de celles-ci à des clients potentiels.
+							</span>
+							<span class="experience-details">
+								<span class="location">
+									<span class="glyphicon glyphicon-map-marker"></span>
+									Dakkar
+								</span>
+							</span>
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="background-white">
+			<div id="abilities" class="container">
+				<h2>Abilities</h2>
+				<p class="lead">
+					&ldquo;La vie sans connaissance est la mort déguisée.&rdquo;<br />- Talib Kweli
+				</p>
+
+				<hr />
+
+				<h3>Skills</h3>
+
+				<div class="row">
+					<div class="col-md-6">
+						<ul class="no-bullets">
+							<li>
+								<span class="ability-title">Python</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Raspberry pi</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Django</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Matlab</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Object Oriented Programming</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Flask</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">HTML/Javascript/CSS</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Maintenace</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul class="no-bullets">
+							<li>
+								<span class="ability-title">C</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Linux</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">BASIC</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">SQL</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Machine Learning</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Artificial Intelligence</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Photoshop</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">Git</span>
+								<span class="ability-score">
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star filled"></span>
+									<span class="glyphicon glyphicon-star"></span>
+									<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="text-center project-referal">
+					<p>Ce projet est construit sur un framework Python.</p>
+					<a href="https://github.com/alyasamba/me" class="btn btn-primary" target="_blank">See project on Github</a>
+				</div>
+
+				<hr />
+
+				<h3>Languages</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<ul class="no-bullets">
+							<li>
+								<span class="ability-title">English</span>
+								<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star"></span>
+								</span>
+							</li>
+							<li>
+								<span class="ability-title">French</span>
+								<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="projects" class="container">
+			<h2>Projets</h2>
+			<p class="lead">
+				&ldquo;Vous pouvez faire tout ce que vous voulez si vous y croyez.&rdquo;<br />- Benjamin Franklin
+			</p>
+
+			<hr />
+
+			<div class="row">
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<figure class="effect">
+						<img src="{%static 'images/project_mals.jpg' %}"/>
+
+						<figcaption>
+							<h3>Mals</h3>
+							<p>Mals, une agence créative située à Dakar</p>
+							<p><strong>Tags:</strong>Development,Django,Bootstrap</p>
+							<a href="https://www.pythonanywhere..com/" target="_blank"></a>
+							<span class="icon">
+								<span class="glyphicon glyphicon-new-window"></span>
+							</span>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<figure class="effect">
+						<img src="{%static 'images/project_soap.jpg' %}"/>
+
+						<figcaption>
+							<h3>SOAP</h3>
+							<p>Build the website of a barbershop</p>
+							<p><strong>Tags:</strong>Design,Development,Django,Bootstrap</p>
+							<a href="http://soaphair.nl/" target="_blank"></a>
+							<span class="icon">
+								<span class="glyphicon glyphicon-new-window"></span>
+							</span>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<figure class="effect">
+						<img src="{%static 'images/project_uplift.png' %}"/>
+
+						<figcaption>
+							<h3>UPLiFT</h3>
+							<p>Construire le site Web d'une société nationale de microfinances</p>
+							<p><strong>Tags:</strong>Design,Development,Dakar,Bootstrap</p>
+							<a href="http://uplift.org.ph" target="_blank"></a>
+							<span class="icon">
+								<span class="glyphicon glyphicon-new-window"></span>
+							</span>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<figure class="effect">
+						<img src="{%static 'images/project_coffee.png' %}"/>
+
+						<figcaption>
+							<h3>Coffee Recognition</h3>
+							<p>Créer le site Web et reconnaître l'image du café d'une ferme de café locale</p>
+							<p><strong>Tags:</strong>Design,Django,Bootstrap,Artificial Intelligence,Image Processing, Tensorflow</p>
+							<a href="http://coffeedef.pythonanywhere.com" target="_blank"></a>
+							<span class="icon">
+								<span class="glyphicon glyphicon-new-window"></span>
+							</span>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+
+		<div class="background-gray">
+			<div id="contact" class="container">
+				<h2>Contact</h2>
+				<p class="lead">
+					&ldquo;Si j'avais demandé aux gens ce qu'ils voulaient, ils auraient dit des chevaux plus rapides. &rdquo;<br />- Henry Ford
+				</p>
+
+				<hr />
+
+				<div class="row">
+					<div class="col-md-6">
+						<ul class="no-bullets">
+							<li>
+								<a href="https://twitter.com/SambaAli9" target="_blank">
+									<span class="icon icon-twitter"></span>
+									https://twitter.com/SambaAli9
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/ali-samba-8327001bb/" target="_blank">
+									<span class="icon icon-linkedin"></span>
+									https://www.linkedin.com/in/ali-samba-8327001bb/
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul class="no-bullets">
+							<li>
+								<a href="https://www.facebook.com/bayealilaye" target="_blank">
+									<span class="icon icon-facebook"></span>
+									https://www.facebook.com/bayealilaye
+								</a>
+							</li>
+							<li>
+								<span class="icon icon-email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sopesherifabdoulah@gmail.com</span>
+								<span style="unicode-bidi:bidi-override; direction: rtl;">
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-3361587-8']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</body>
+</html>
