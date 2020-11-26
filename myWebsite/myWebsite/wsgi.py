@@ -18,4 +18,3 @@ application = get_wsgi_application()
 
 from dj_static import Cling
 application = Cling(get_wsgi_application())
-Also don't forget to check "DJANGO_SETTINGS_MODULE". It is prone to frequent mistakes.
