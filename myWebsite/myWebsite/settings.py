@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-from decouple import config
-import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,10 +26,10 @@ SECRET_KEY = 'mp&8(pms9qwgpjy1i_7m^#n5_$n9o13dt@=28rs=nls7y97*_('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-SECRET_KEY = config('SECRET_KEY')
+# SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['www.bayeali.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -133,10 +132,5 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 
 WSGI_APPLICATION = 'myWebsite.wsgi.application'
 
-default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-
-DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
