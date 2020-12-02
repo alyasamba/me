@@ -1,0 +1,440 @@
+Metadata-Version: 2.1
+Name: Zope
+Version: 5.1
+Summary: Zope application server / web framework
+Home-page: https://zope.readthedocs.io/en/latest/
+Author: Zope Foundation and Contributors
+Author-email: zope-dev@zope.org
+License: ZPL 2.1
+Project-URL: Documentation, https://zope.readthedocs.io
+Project-URL: Issue Tracker, https://github.com/zopefoundation/Zope/issues
+Project-URL: Sources, https://github.com/zopefoundation/Zope
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Zope :: 5
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >= 3.6
+Requires-Dist: AccessControl (>=4.2)
+Requires-Dist: Acquisition
+Requires-Dist: BTrees
+Requires-Dist: Chameleon (>=3.7.0)
+Requires-Dist: DateTime
+Requires-Dist: DocumentTemplate (>=4.0)
+Requires-Dist: ExtensionClass
+Requires-Dist: MultiMapping
+Requires-Dist: PasteDeploy
+Requires-Dist: Persistence
+Requires-Dist: RestrictedPython
+Requires-Dist: ZConfig (>=2.9.2)
+Requires-Dist: ZODB
+Requires-Dist: setuptools (>=36.2)
+Requires-Dist: transaction (>=2.4)
+Requires-Dist: waitress
+Requires-Dist: zExceptions (>=3.4)
+Requires-Dist: z3c.pt
+Requires-Dist: zope.browser
+Requires-Dist: zope.browsermenu
+Requires-Dist: zope.browserpage (>=4.4.0.dev0)
+Requires-Dist: zope.browserresource (>=3.11)
+Requires-Dist: zope.component
+Requires-Dist: zope.configuration
+Requires-Dist: zope.container
+Requires-Dist: zope.contentprovider
+Requires-Dist: zope.contenttype
+Requires-Dist: zope.deferredimport
+Requires-Dist: zope.event
+Requires-Dist: zope.exceptions
+Requires-Dist: zope.globalrequest
+Requires-Dist: zope.i18n[zcml]
+Requires-Dist: zope.i18nmessageid
+Requires-Dist: zope.interface (>=3.8)
+Requires-Dist: zope.lifecycleevent
+Requires-Dist: zope.location
+Requires-Dist: zope.pagetemplate (>=4.0.2)
+Requires-Dist: zope.processlifetime
+Requires-Dist: zope.proxy
+Requires-Dist: zope.ptresource
+Requires-Dist: zope.publisher
+Requires-Dist: zope.schema
+Requires-Dist: zope.security
+Requires-Dist: zope.sequencesort
+Requires-Dist: zope.site
+Requires-Dist: zope.size
+Requires-Dist: zope.tal
+Requires-Dist: zope.tales (>=5.0.2)
+Requires-Dist: zope.testbrowser
+Requires-Dist: zope.testing
+Requires-Dist: zope.traversing
+Requires-Dist: zope.viewlet
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: repoze.sphinx.autointerface ; extra == 'docs'
+Requires-Dist: tempstorage ; extra == 'docs'
+Provides-Extra: wsgi
+Requires-Dist: Paste ; extra == 'wsgi'
+
+.. image:: https://travis-ci.com/zopefoundation/Zope.svg?branch=master
+        :target: https://travis-ci.com/zopefoundation/Zope
+
+.. image:: https://coveralls.io/repos/github/zopefoundation/Zope/badge.svg?branch=master
+        :target: https://coveralls.io/github/zopefoundation/Zope?branch=master
+
+.. image:: https://readthedocs.org/projects/zope/badge/?version=latest
+        :target: https://zope.readthedocs.org/en/latest/
+        :alt: Documentation Status
+
+.. image:: https://img.shields.io/pypi/v/Zope.svg
+        :target: https://pypi.org/project/Zope/
+        :alt: Current version on PyPI
+
+.. image:: https://img.shields.io/pypi/pyversions/Zope.svg
+        :target: https://pypi.org/project/Zope/
+        :alt: Supported Python versions
+
+.. image:: https://requires.io/github/zopefoundation/Zope/requirements.svg?branch=master
+        :target: https://requires.io/github/zopefoundation/Zope/requirements/?branch=master
+        :alt: Requirements Status
+
+
+Zope is an open-source web application server.
+
+This document provides some general information about Zope and provides
+links to other documents. The full documentation can be found at
+https://zope.readthedocs.io.
+
+
+.. contents::
+    :local:
+    :depth: 1
+
+
+Installation
+============
+
+Please visit the installation documentation at
+https://zope.readthedocs.io/en/latest/INSTALL.html for detailed installation
+guidance.
+
+
+License
+=======
+
+Zope is licensed under the OSI-approved `Zope Public License` (ZPL), version
+2.1. The full license text is included in ``LICENSE.txt``.
+
+
+Bug tracker
+===========
+
+Bugs reports should be made through the Zope bugtracker at
+https://github.com/zopefoundation/Zope/issues.  A bug report should
+contain detailed information about how to reproduce the bug.
+
+
+Change log
+==========
+
+These are all the changes for Zope 5, starting with the alpha releases,
+since the branch point at Zope 4.1.2.
+
+The change log for the previous version, Zope 4, is at
+https://github.com/zopefoundation/Zope/blob/4.x/CHANGES.rst
+
+
+5.1 (2020-11-12)
+----------------
+
+Backwards incompatible changes
+++++++++++++++++++++++++++++++
+
+- Exclude characters special for ``chameleon``'s interpolation syntax
+  (i.e. ``${}``) from use in TALES path expressions to reduce the failure risk
+  for the ``chameleon`` interpolation heuristics
+  (`#925 <https://github.com/zopefoundation/Zope/issues/925>`_)
+
+Features
+++++++++
+
+- Restore the ZMI `Debug Information` control panel page
+  (`#898 <https://github.com/zopefoundation/Zope/issues/898>`_)
+
+Fixes
++++++
+
+- Fix ZMI visibility of pre elements in error log
+  (`Products.SiteErrorLog#26
+  <https://github.com/zopefoundation/Products.SiteErrorLog/issues/26>`_)
+
+- Fix ``length`` for page template repeat variables
+  (`#913 <https://github.com/zopefoundation/Zope/issues/913>`_)
+
+- Update `isort` to version 5.
+  (`#892 <https://github.com/zopefoundation/Zope/pull/892>`_)
+
+- Update to newest versions of dependencies.
+
+
+5.0 (2020-10-08)
+----------------
+
+Backwards incompatible changes
+++++++++++++++++++++++++++++++
+
+- Drop support for Python 3.5 as it will run out of support soon.
+  (`#841 <https://github.com/zopefoundation/Zope/issues/841>`_)
+
+
+Features
+++++++++
+
+- HTTP header encoding support
+  (`#905 <https://github.com/zopefoundation/Zope/pull/905>`_)
+
+- Add support for Python 3.9.
+
+- New interface ``Products.PageTemplates.interfaces.IZopeAwareEngine``.
+  It can be used as the "provides" of an adapter registration
+  to adapt a non ``Zope`` tales engine to an engine to be used
+  by ``Zope`` page templates
+  (`#864 <https://github.com/zopefoundation/Zope/issues/864>`_).
+  Currently, the adaptation is used only when the
+  template is rendered with ``chameleon``;
+  with ``zope.pagetemplate``, the engine is used
+  as is - this may change in the future.
+
+- Allow (some) builtins as first element of a (TALES) path expression:
+  in an untrusted context, the builtins from
+  ``AccessControl.safe_builtins`` are allowed;
+  in a trusted context, all Python builtins are allowed in addition
+  (and take precedence)
+  (`zope.tales#23 <https://github.com/zopefoundation/zope.tales/issues/23>`_).
+
+- Support the ``attrs`` predefined template variable again (as
+  far as ``chameleon`` allows it)
+  (`#860 <https://github.com/zopefoundation/Zope/issues/860>`_).
+
+- Use ``Chameleon`` (>= 3.7.2) configuration to get better
+  information for errors detected during template execution
+  (`#837 <https://github.com/zopefoundation/Zope/issues/837>`_).
+
+Fixes
++++++
+
+- Provide a more senseful ``OFS.SimpleItem.Item_w__name__.id``
+  to avoid bugs by use of deprecated direct ``id`` access
+  (as e.g. (`#903 <https://github.com/zopefoundation/Zope/issues/903>`_).
+
+- Update to ``zope.interface > 5.1.0`` to fix a memory leak.
+
+- Fix export of files with non-latin-1 compatible names
+  (`#890 <https://github.com/zopefoundation/Zope/issues/890>`_)
+
+- Avoid unsolicited translations
+  (`#876 <https://github.com/zopefoundation/Zope/issues/876>`_)
+
+- Make "chameleon-zope context wrapping" more faithful.
+  (`#873 <https://github.com/zopefoundation/Zope/pull/873/files>`_)
+
+- Let "unicode conflict resolution" work for all templates (not just
+  ``ZopePageTemplate``).
+  (`#872 <https://github.com/zopefoundation/Zope/pull/872/files>`_)
+
+- Make "Unicode Conflict Resolution" available for templates
+  rendered with ``chameleon``
+  (`Products.CMFPlone#3145
+  <https://github.com/plone/Products.CMFPlone/issues/3145>`_).
+
+- Improve documentation of ``CONTEXTS`` in the "Zope Book".
+
+- Decrease cookie size for copy/paste clipboard cookie
+  (`#854 <https://github.com/zopefoundation/Zope/issues/854>`_)
+
+- Fix ``default`` keyword handling in page templates
+  (`#846 <https://github.com/zopefoundation/Zope/issues/846>`_)
+
+- Fix parsing of package version and show correct major version in the ZMI
+
+- Improve solidity of the ``debugError`` method.
+  (`#829 <https://github.com/zopefoundation/Zope/issues/829>`_)
+
+- Fix that ``ZTUtils.LazyFilter`` could not be imported inside a restricted
+  Python script.
+  (`#901 <https://github.com/zopefoundation/Zope/pull/901>`_)
+
+Other changes
++++++++++++++
+
+- Add ``pyupgrade`` via ``pre-commit``
+  (`#859 <https://github.com/zopefoundation/Zope/issues/859>`_)
+
+- Add ``tal:switch`` test
+
+
+5.0a2 (2020-04-24)
+------------------
+
+Bug fixes
++++++++++
+
+- Pin ``AccessControl`` 4.2 for the `Manage WebDAV Locks` permission
+
+- Fix ``HEAD`` requests on registered views
+  (`#816 <https://github.com/zopefoundation/Zope/issues/816>`_)
+
+- Improve ``chameleon`` --> ``zope.tales`` context wrapper
+  (support for template variable injection)
+  (`#812 <https://github.com/zopefoundation/Zope/pull/812>`_).
+
+- Require ``zope.tales>=5.0.2``
+
+- Fix issue 717 by fully honoring the engine returned by
+  ``PageTemplate.pt_getEngine``
+  (`#717 <https://github.com/zopefoundation/Zope/issues/717>`_).
+  The engine also decides about the use of ``zope.tales``
+  (engine is an instance of ``zope.pagetemplate.engine.ZopeBaseEngine``)
+  or ``chameleon.tales`` (otherwise) TALES expressions.
+
+- Fixed encoding issue of `displayname` WebDAV property
+  (`#797 <https://github.com/zopefoundation/Zope/issues/797>`_)
+
+- Fixed fallback implementation of ``manage_DAVget``
+  (`#799 <https://github.com/zopefoundation/Zope/issues/799>`_)
+
+Other changes
++++++++++++++
+
+- Update to newest versions of dependencies.
+
+
+5.0a1 (2020-02-28)
+------------------
+
+Backwards incompatible changes
+++++++++++++++++++++++++++++++
+
+- Drop support for Python 2.7 aka Zope 5 cannot be run on Python 2 any more.
+  If you are still running on Python 2.7 upgrade to the latest Zope 4 version
+  first, migrate to Python 3 and than switch to Zope 5.
+  (`#692 <https://github.com/zopefoundation/Zope/issues/692>`_)
+
+- Remove all backwards-compatibility code marked to go away in Zope 5
+  (`#478 <https://github.com/zopefoundation/Zope/issues/478>`_)
+
+- Drop support for running Zope with ZServer as it is Python 2 only.
+  (`#592 <https://github.com/zopefoundation/Zope/issues/592>`_)
+
+- Remove deprecated ``postProcessInputs`` request method.
+  (`#782 <https://github.com/zopefoundation/Zope/issues/782>`_)
+
+- Remove deprecated module ``ZPublisher.maybe_lock``.
+  (`#758 <https://github.com/zopefoundation/Zope/issues/758>`_)
+
+- Remove Help System methods from the product context.
+  (`#756 <https://github.com/zopefoundation/Zope/issues/756>`_)
+
+- Remove more deprecated code.
+  (`#757 <https://github.com/zopefoundation/Zope/issues/757>`_)
+
+- Updated Zope documentation sources for Zope 5.
+  (`#659 <https://github.com/zopefoundation/Zope/issues/659>`_)
+
+New features
+++++++++++++
+
+- Restore WebDAV support in Zope.
+  (`#744 <https://github.com/zopefoundation/Zope/issues/744>`_)
+
+- Enable WebDAV support independent of ``ZServer``.
+  (`#787 <https://github.com/zopefoundation/Zope/pull/787>`_)
+
+- Clean up and sanitize permissions used for WebDAV-related methods.
+
+- Add ``wsgi.file_wrapper`` implementation
+  https://www.python.org/dev/peps/pep-0333/#optional-platform-specific-file-handling
+  (`#719 <https://github.com/zopefoundation/Zope/pull/719>`_)
+
+Bug fixes
++++++++++
+
+- Only use ``wsgi.file_wrapper`` for response bodies with a ``read`` method.
+  (`#763 <https://github.com/zopefoundation/Zope/issues/763>`_)
+
+- Improve detection of HTTPS requests.
+  (`#680 <https://github.com/zopefoundation/Zope/issues/680>`_)
+
+- Fix several ZMI links so they respect virtual hosting.
+  (`#788 <https://github.com/zopefoundation/Zope/issues/788>`_)
+
+- Fix sort link URLs on ``manage_main``
+  (`#748 <https://github.com/zopefoundation/Zope/issues/748>`_)
+
+- More tests to make sure all ``__str__`` implementations return native
+  strings.
+  (`#692 <https://github.com/zopefoundation/Zope/issues/692>`_)
+
+- Fix longstanding test bug by forcing the page template engine.
+  Many tests in ``Products.PageTemplates`` used the old Zope page template
+  engine because the correct one was not registered during setup.
+
+- Close opened db during shutdown (as ZServer is already doing).
+  (`#740 <https://github.com/zopefoundation/Zope/issues/740>`_)
+
+- The method ``unrestrictedTraverse`` raises an error when
+  the argument ``path`` is not something it can work with.
+  (`#674 <https://github.com/zopefoundation/Zope/issues/674>`_)
+
+- Improve ZMI Security Tab usability for high numbers of roles.
+  (`#730 <https://github.com/zopefoundation/Zope/issues/730>`_)
+
+- Some small ZMI rendering fixes.
+  (`#729 <https://github.com/zopefoundation/Zope/issues/729>`_)
+
+- Fix error when using database minimize in the ZMI.
+  (`#726 <https://github.com/zopefoundation/Zope/issues/726>`_)
+
+- Fix ``__getattr__`` signature in ``UnauthorizedBinding``.
+  (`#703 <https://github.com/zopefoundation/Zope/issues/703>`_)
+
+- Fix VirtualHostMonster not being able to set mappings under Python 3.
+  (`#708 <https://github.com/zopefoundation/Zope/issues/708>`_)
+
+- Reduce the danger of acquiring built-in names on the ZMI Find tab.
+  (`#712 <https://github.com/zopefoundation/Zope/issues/712>`_)
+
+- Restore the mistakenly removed Properties ZMI tab on Image objects
+  (`#706 <https://github.com/zopefoundation/Zope/issues/706>`_)
+
+- Fix ``OFS.Image.File.__str__`` for ``Pdata`` contents
+  (`#711 <https://github.com/zopefoundation/Zope/issues/711>`_)
+
+- Set ``REMOTE_USER`` in wsgi environ using Zope user authentication
+  (`#713 <https://github.com/zopefoundation/Zope/pull/713>`_)
+
+- Add ``Paste`` as ``extras_require`` dependency to pull in ``Paste`` when
+  installing with `pip` and `constraints.txt` to prevent startup errors.
+  This requires adding the ``[wsgi]`` extra in the egg specification.
+  (`#734 <https://github.com/zopefoundation/Zope/issues/734>`_)
+
+Other changes
++++++++++++++
+
+- Move retried request delay handling out of ``supports_retry``
+  (`#474 <https://github.com/zopefoundation/Zope/issues/474>`_)
+
+- Improve documentation for Zope's error logging services.
+
+

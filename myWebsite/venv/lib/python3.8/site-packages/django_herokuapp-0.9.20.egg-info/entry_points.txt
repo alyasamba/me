@@ -1,0 +1,3 @@
+[console_scripts]
+herokuapp_startproject.py = herokuapp.bin.herokuapp_startproject:main
+

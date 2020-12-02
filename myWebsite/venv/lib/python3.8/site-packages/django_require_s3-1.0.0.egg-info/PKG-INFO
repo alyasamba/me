@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: django-require-s3
+Version: 1.0.0
+Summary: An integration between django-require and the S3 storage backend from django-storages.
+Home-page: https://github.com/etianen/django-require-s3
+Author: Dave Hall
+Author-email: dave@etianen.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet :: WWW/HTTP
